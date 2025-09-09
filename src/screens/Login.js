@@ -1,6 +1,7 @@
+import React from "react";
 import { Image, Text, View, StyleSheet, Button, Alert, TextInput } from "react-native";
 
-const Login = () => {
+const Login = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Image style={styles.logo} source={require("../../assets/images/amd.png")} />
@@ -28,7 +29,8 @@ const Login = () => {
           <Button
             title="Entrar"
             onPress={() => {
-              Alert.alert("Login Realizado");
+              // Alert.alert("Login Realizado");
+              navigation.navigate('HomeScreen')
             }}
             color="#1e90ff"
           />
